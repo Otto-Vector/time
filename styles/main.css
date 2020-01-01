@@ -1,0 +1,92 @@
+@font-face {
+  font-family: firm;
+  src: url("../fonts/golos.woff2") format("../fonts/woff2"), url("../fonts/golos.woff") format("woff"), url("golos.ttf") format("ttf");
+  }
+
+body {
+  font-size: 50px;
+  font-family: firm;
+  background-image: url("../img/bg1.png");
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("../img/arrow_down.png") 95% 50% no-repeat #e3e4e5;
+  border: 1px solid #a2a2a2;
+  border-radius: 3px;
+  color: #757575;
+  height: 30px;
+  padding: 0;
+  padding-left: 10px;
+  margin: 15px;
+  width: 185px;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: inset 0px 0px 25px 25px rgba(0,0,0,0.09);
+  background: linear-gradient(-133deg,rgba(0,0,0,0.1),rgba(0,0,0,0.01));
+  padding: 25px 0;
+}
+
+div {
+  margin: 25px
+}
+
+#list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#clock {
+  font-size: 200%;
+}
+#setup {
+  display: flex;
+  justify-content: center;
+}
+
+#format {
+  border: 2px solid activecaption;
+  border-radius: 50%;
+  box-shadow: 0 0 3px 3px #666;
+  font-size: 15px;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+@media (max-width: 760px) {
+  body {
+    font-size: 40px;
+  }
+}
+@media (max-width: 640px) {
+  body {
+    font-size: 30px;
+  }
+  div {
+    margin: 20px;
+  }
+}
+@media (max-width: 480px) {
+  #clock {
+    font-size: 150%;
+  }
+}
+
+@media (max-width: 390px) {
+  body {
+    font-size: 25px;
+  }
+  div {
+    margin: 0;
+  }
+}
