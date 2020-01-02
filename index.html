@@ -9,11 +9,30 @@
 </head>
 
 <body>
-  <div class="wrap">
+  <div id="analog">
+    <div class="analog-body">
+      <div class="analog-point analog-point_1"></div>
+      <div class="analog-point analog-point_2"></div>
+      <div class="analog-point analog-point_3"></div>
+      <div class="analog-point analog-point_4"></div>
+      <div class="analog-point analog-point_5"></div>
+      <div class="analog-point analog-point_6"></div>
+      <div class="analog-point analog-point_7"></div>
+      <div class="analog-point analog-point_8"></div>
+      <div class="analog-point analog-point_9"></div>
+      <div class="analog-point analog-point_10"></div>
+      <div class="analog-point analog-point_11"></div>
+      <div class="analog-point analog-point_12"></div>
+      <div class="analog-arrow_hour"></div>
+      <div class="analog-arrow_min"></div>
+      <div class="analog-arrow_sec"></div>
+    </div>
+  </div>
+  <div class="wrap margin">
     <button id="format">24</button>
-    <div id="clock">Здесь будет время</div>
-    <div id="date">Здесь будет дата</div>
-    <div id="list">
+    <div id="clock" class="margin">Здесь будет время</div>
+    <div id="date" class="margin">Здесь будет дата</div>
+    <div id="list" class="margin">
       <label class="timezones" for="timezone">Выберите город
       </label>
       <select id="timezone" name="timezone">

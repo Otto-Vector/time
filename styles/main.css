@@ -9,10 +9,6 @@ body {
   background-image: url("../img/bg1.png");
 }
 
-div {
-  margin: 25px
-}
-
 #format {
   border: 2px solid activecaption;
   border-radius: 50%;
@@ -23,6 +19,10 @@ div {
   font-weight: bold;
   cursor: pointer;
   user-select: none;
+}
+
+div.margin {
+  margin: 25px;
 }
 
 .wrap {
@@ -67,6 +67,72 @@ select {
   cursor: pointer;
 }
 
+.analog-body {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 4px solid black;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.analog-point {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 5px;
+  height: 130px;
+  border-bottom: 5px solid black;
+  transform-origin: top center;
+}
+
+.analog-point_2 { transform: rotate(30deg);}
+.analog-point_3 { transform: rotate(60deg);}
+.analog-point_4 { transform: rotate(90deg);}
+.analog-point_5 { transform: rotate(120deg);}
+.analog-point_6 { transform: rotate(150deg);}
+.analog-point_7 { transform: rotate(180deg);}
+.analog-point_8 { transform: rotate(210deg);}
+.analog-point_9 { transform: rotate(240deg);}
+.analog-point_10 { transform: rotate(270deg);}
+.analog-point_11 { transform: rotate(300deg);}
+.analog-point_12 { transform: rotate(330deg);}
+
+.analog-arrow_sec {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 0px;
+  height: 0px;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-top: 125px solid black;
+  transform-origin: top center;
+  transform: rotate(300deg);
+}
+
+.analog-arrow_min {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 2px;
+  height: 0px;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 115px solid black;
+  transform-origin: top center;
+  transform: rotate(230deg);
+}
+
+.analog-arrow_hour {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 3px;
+  height: 0px;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 85px solid black;
+  transform-origin: top center;
+  transform: rotate(30deg);
+}
+
 @media (max-width: 760px) {
   body {
     font-size: 40px;
@@ -76,7 +142,7 @@ select {
   body {
     font-size: 30px;
   }
-  div {
+  div.margin {
     margin: 20px;
   }
 }
@@ -89,7 +155,7 @@ select {
   body {
     font-size: 25px;
   }
-  div {
+  div.margin {
     margin: 0;
   }
 }
