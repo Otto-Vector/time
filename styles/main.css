@@ -15,18 +15,6 @@ body {
   background-size:  cover;
 }
 
-#format {
-  border: 2px solid activecaption;
-  border-radius: 50%;
-  box-shadow: 0 0 3px 2px #666;
-  font-size: 15px;
-  padding: 5px;
-  margin-bottom: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  user-select: none;
-}
-
 div.margin {
   margin: 25px;
 }
@@ -41,6 +29,18 @@ div.margin {
   padding: 25px 0;
 }
 
+#format {
+  border: 2px solid activecaption;
+  border-radius: 50%;
+  box-shadow: 0 0 3px 2px #666;
+  font-size: 15px;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  filter: invert(1);
+}
 
 #clock {
   font-size: 200%;
