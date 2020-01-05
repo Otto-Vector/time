@@ -11,7 +11,7 @@ body {
   background-size:  cover;
 }
 
-input, button {
+input, button, select {
   outline: 0;
   border: none;}
 
