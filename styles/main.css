@@ -3,22 +3,22 @@
   src: url("../fonts/golos.woff2") format("../fonts/woff2"), url("../fonts/golos.woff") format("woff"), url("golos.ttf") format("ttf");
   }
 
+input, button, select {
+  outline: 0;
+  border: none;
+}
+
 body {
   font-size: 50px;
   font-family: firm;
-  text-shadow: 1px 1px 1px white;
   background: url("../img/bg2.jpg") 50% 50% no-repeat;
   background-size:  cover;
 }
 
-input, button, select {
-  outline: 0;
-  border: none;}
-
 #format {
   border: 2px solid activecaption;
   border-radius: 50%;
-  box-shadow: 0 0 3px 3px #666;
+  box-shadow: 0 0 3px 2px #666;
   font-size: 15px;
   padding: 5px;
   margin-bottom: 10px;
@@ -41,20 +41,26 @@ div.margin {
   padding: 25px 0;
 }
 
+
+#clock {
+  font-size: 200%;
+  text-shadow: 0px 1.5px 3px whitesmoke;
+}
+
+#date {
+  text-shadow: 0 1.5px 2px #ccc;
+}
+#setup {
+  display: flex;
+  justify-content: center;
+}
+
 #list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-}
-
-#clock {
-  font-size: 200%;
-}
-
-#setup {
-  display: flex;
-  justify-content: center;
+  text-shadow: 0px 1.5px 2px #bbb;
 }
 
 select {
