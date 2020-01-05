@@ -102,6 +102,7 @@ function timer(hour, minutes, secunds) {
   document.querySelector(".analog-arrow_sec").style.transform = "rotate("+(6*secunds-180)+"deg)";
   document.querySelector(".analog-arrow_min").style.transform = "rotate("+(6*minutes-180)+"deg)";
   document.querySelector(".analog-arrow_hour").style.transform = "rotate("+(30*(hour%12)+minutes/2-180)+"deg)";
+
   var prefix= "";
   if (switch_to_12) prefix = (hour > 11 && hour != 0) ? " pm" : " am";
         
