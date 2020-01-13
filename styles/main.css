@@ -1,13 +1,17 @@
+
+/*подключение шрифта*/
 @font-face {
   font-family: firm;
   src: url("../fonts/golos.woff2") format("../fonts/woff2"), url("../fonts/golos.woff") format("woff"), url("golos.ttf") format("ttf");
   }
 
+/*сброс стилей инпутов*/
 input, button, select {
   outline: 0;
   border: none;
 }
 
+/*навешивание основных параметров и фона на body*/
 body {
   font-size: 50px;
   font-family: firm;
@@ -15,10 +19,83 @@ body {
   background-size:  cover;
 }
 
+/*небольшой костыль для дивов*/
 div.margin {
   margin: 25px;
 }
 
+/*блок для кастомизации часов*/
+#analog {}
+
+  /*тело часов, основной круг*/
+  .analog-body {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 4px solid black;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+    /*основные параметры квадратных точек обозначающих ЧАС*/
+    .analog-point {
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 5px;
+      height: 130px;
+      border-bottom: 5px solid black;
+      transform-origin: top center;
+    }
+    /*положение точек ЧАС по кругу*/
+    .analog-point_2 { transform: rotate(30deg);}
+    .analog-point_3 { transform: rotate(60deg);}
+    .analog-point_4 { transform: rotate(90deg);}
+    .analog-point_5 { transform: rotate(120deg);}
+    .analog-point_6 { transform: rotate(150deg);}
+    .analog-point_7 { transform: rotate(180deg);}
+    .analog-point_8 { transform: rotate(210deg);}
+    .analog-point_9 { transform: rotate(240deg);}
+    .analog-point_10 { transform: rotate(270deg);}
+    .analog-point_11 { transform: rotate(300deg);}
+    .analog-point_12 { transform: rotate(330deg);}
+
+    /*секундная стрелка часов*/
+    .analog-arrow_sec {
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 0px;
+      height: 0px;
+      border-left: 2px solid transparent;
+      border-right: 2px solid transparent;
+      border-top: 125px solid black;
+      transform-origin: top center;
+      transform: rotate(300deg);
+    }
+    /*минутная стрелка часов*/
+    .analog-arrow_min {
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 2px;
+      height: 0px;
+      border-left: 3px solid transparent;
+      border-right: 3px solid transparent;
+      border-top: 115px solid black;
+      transform-origin: top center;
+      transform: rotate(230deg);
+    }
+    /*часовая стрелка*/
+    .analog-arrow_hour {
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 3px;
+      height: 0px;
+      border-left: 3px solid transparent;
+      border-right: 3px solid transparent;
+      border-top: 85px solid black;
+      transform-origin: top center;
+      transform: rotate(30deg);
+    }
+
+/*оболочка поля цифровых часов с основными параметрами и фоном*/
 .wrap {
   display: flex;
   flex-direction: column;
@@ -28,7 +105,7 @@ div.margin {
   background: linear-gradient(-133deg,rgba(0,0,0,0.1),rgba(0,0,0,0.01));
   padding: 25px 0;
 }
-
+/*кнопка переключения формата 12/24*/
 #format {
   border: 2px solid activecaption;
   border-radius: 50%;
@@ -41,109 +118,47 @@ div.margin {
   user-select: none;
   filter: invert(1);
 }
-
+/*поле вывода часов*/
 #clock {
   font-size: 200%;
   text-shadow: 0px 1.5px 3px whitesmoke;
 }
-
+/*поле вывода даты*/
 #date {
   text-shadow: 0 1.5px 2px #ccc;
 }
+/*поле выбора часового пояса*/
 #setup {
   display: flex;
   justify-content: center;
 }
+  /*формат текста лэйбла списка городов*/
+  #list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0px 1.5px 2px #bbb;
+  }
 
-#list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  text-shadow: 0px 1.5px 2px #bbb;
-}
+  /*форматирование поля списка городов*/
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("../img/arrow_down.png") 95% 50% no-repeat #e3e4e5;
+    border: 1px solid #a2a2a2;
+    border-radius: 3px;
+    color: #757575;
+    padding: 5px;
+    padding-left: 10px;
+    margin: 15px;
+    margin-top: 5%;
+    width: 185px;
+    cursor: pointer;
+  }
 
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: url("../img/arrow_down.png") 95% 50% no-repeat #e3e4e5;
-  border: 1px solid #a2a2a2;
-  border-radius: 3px;
-  color: #757575;
-  padding: 5px;
-  padding-left: 10px;
-  margin: 15px;
-  margin-top: 5%;
-  width: 185px;
-  cursor: pointer;
-}
-
-.analog-body {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  border: 4px solid black;
-  border-radius: 50%;
-  margin: 0 auto;
-}
-
-.analog-point {
-  position: absolute;
-  top: 50%; left: 50%;
-  width: 5px;
-  height: 130px;
-  border-bottom: 5px solid black;
-  transform-origin: top center;
-}
-
-.analog-point_2 { transform: rotate(30deg);}
-.analog-point_3 { transform: rotate(60deg);}
-.analog-point_4 { transform: rotate(90deg);}
-.analog-point_5 { transform: rotate(120deg);}
-.analog-point_6 { transform: rotate(150deg);}
-.analog-point_7 { transform: rotate(180deg);}
-.analog-point_8 { transform: rotate(210deg);}
-.analog-point_9 { transform: rotate(240deg);}
-.analog-point_10 { transform: rotate(270deg);}
-.analog-point_11 { transform: rotate(300deg);}
-.analog-point_12 { transform: rotate(330deg);}
-
-.analog-arrow_sec {
-  position: absolute;
-  top: 50%; left: 50%;
-  width: 0px;
-  height: 0px;
-  border-left: 2px solid transparent;
-  border-right: 2px solid transparent;
-  border-top: 125px solid black;
-  transform-origin: top center;
-  transform: rotate(300deg);
-}
-
-.analog-arrow_min {
-  position: absolute;
-  top: 50%; left: 50%;
-  width: 2px;
-  height: 0px;
-  border-left: 3px solid transparent;
-  border-right: 3px solid transparent;
-  border-top: 115px solid black;
-  transform-origin: top center;
-  transform: rotate(230deg);
-}
-
-.analog-arrow_hour {
-  position: absolute;
-  top: 50%; left: 50%;
-  width: 3px;
-  height: 0px;
-  border-left: 3px solid transparent;
-  border-right: 3px solid transparent;
-  border-top: 85px solid black;
-  transform-origin: top center;
-  transform: rotate(30deg);
-}
+/*адаптив*/
 
 @media (max-width: 760px) {
   body {
